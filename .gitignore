@@ -1,0 +1,5 @@
+# sks-asa-server-setup
+ServerDirectory/*
+steamcmd/*
+!steamcmd/steamcmd.exe
+!ServerDirectory/ShooterGame/Saved/Config/*

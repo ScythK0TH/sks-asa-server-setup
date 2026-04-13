@@ -1,0 +1,1 @@
+D:\Servers\ASAServer\steamcmd\steamcmd.exe +force_install_dir D:\Servers\ASAServer\ServerDirectory +login anonymous +app_update 2430930 validate
