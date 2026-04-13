@@ -60,36 +60,18 @@ if errorlevel 2 (
 
 set "MODS="
 set /p MODS=Enter Mods string (comma-separated, leave blank for none): 
-
-echo.
-echo 1: Create start_vanilla.bat
-echo 2: Create start_modded.bat
-choice /c 12 /n /m "Select option"
-if errorlevel 2 goto Modded
-goto Vanilla
-
-:Vanilla
-echo Creating start_vanilla.bat...
-(
-    echo @echo off
-    echo start "" "D:\Servers\ASAServer\ServerDirectory\ShooterGame\Binaries\Win64\ArkAscendedServer.exe" %MAP%?SessionName=%SESSIONNAME%?ServerPassword=%SERVERPASSWORD%?Port=%PORT%?QueryPort=%QUERYPORT%?MaxPlayers=%MAXPLAYERS%?ServerAdminPassword=%ADMINPASSWORD%?RCONEnabled=%RCON_ENABLED%?RCONPort=%RCONPORT% %BATTLEYE_FLAG%
-) > start_vanilla.bat
-goto End
-
-:Modded
 if "%MODS%"=="" (
     set "MODS_FLAG="
 ) else (
-    set "MODS_FLAG=-mods=\"%MODS%\""
+    set "MODS_FLAG=-mods="%MODS%""
 )
-echo Creating start_modded.bat...
+
+echo Creating start.bat...
 (
     echo @echo off
     echo start "" "D:\Servers\ASAServer\ServerDirectory\ShooterGame\Binaries\Win64\ArkAscendedServer.exe" %MAP%?SessionName=%SESSIONNAME%?ServerPassword=%SERVERPASSWORD%?Port=%PORT%?QueryPort=%QUERYPORT%?MaxPlayers=%MAXPLAYERS%?ServerAdminPassword=%ADMINPASSWORD%?RCONEnabled=%RCON_ENABLED%?RCONPort=%RCONPORT% %BATTLEYE_FLAG% %MODS_FLAG%
-) > start_modded.bat
-goto End
+) > start.bat
 
-:End
 echo Done.
 pause
 endlocal
