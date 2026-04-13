@@ -2,5 +2,5 @@
 ServerDirectory/*
 steamcmd/*
 !steamcmd/steamcmd.exe
-!ServerDirectory/ShooterGame/Saved/Config/*
+!ServerDirectory/ShooterGame/Saved/Config/WindowsServer/*
 start.bat
