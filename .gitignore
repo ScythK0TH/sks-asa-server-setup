@@ -1,6 +1,17 @@
 # sks-asa-server-setup
 ServerDirectory/*
+ServerDirectory/ShooterGame/*
+ServerDirectory/ShooterGame/Saved/*
+ServerDirectory/ShooterGame/Saved/Config/*
+ServerDirectory/ShooterGame/Saved/Config/WindowsServer/*
+
+!ServerDirectory/ShooterGame/
+!ServerDirectory/ShooterGame/Saved/
+!ServerDirectory/ShooterGame/Saved/Config/
+!ServerDirectory/ShooterGame/Saved/Config/WindowsServer/
+!ServerDirectory/ShooterGame/Saved/Config/WindowsServer/*
+
 steamcmd/*
 !steamcmd/steamcmd.exe
-!ServerDirectory/ShooterGame/Saved/Config/WindowsServer/*
+
 start.bat
