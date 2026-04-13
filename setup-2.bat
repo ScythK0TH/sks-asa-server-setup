@@ -69,7 +69,7 @@ if "%MODS%"=="" (
 echo Creating start.bat...
 (
     echo @echo off
-    echo start "" "D:\Servers\ASAServer\ServerDirectory\ShooterGame\Binaries\Win64\ArkAscendedServer.exe" %MAP%?SessionName=%SESSIONNAME%?ServerPassword=%SERVERPASSWORD%?Port=%PORT%?QueryPort=%QUERYPORT%?MaxPlayers=%MAXPLAYERS%?ServerAdminPassword=%ADMINPASSWORD%?RCONEnabled=%RCON_ENABLED%?RCONPort=%RCONPORT% %BATTLEYE_FLAG% %MODS_FLAG%
+    echo start "" "D:\Servers\ASAServer\ServerDirectory\ShooterGame\Binaries\Win64\ArkAscendedServer.exe" %MAP%?SessionName=%SESSIONNAME%?ServerPassword=%SERVERPASSWORD%?Port=%PORT%?QueryPort=%QUERYPORT%?RCONEnabled=%RCON_ENABLED%?RCONPort=%RCONPORT%?ServerAdminPassword=%ADMINPASSWORD% -WinLiveMaxPlayers=%MAXPLAYERS% %BATTLEYE_FLAG% %MODS_FLAG%
 ) > start.bat
 
 echo Done.
